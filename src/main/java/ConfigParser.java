@@ -29,6 +29,7 @@ public class ConfigParser {
 
     // This methods read from the file
     public void readConfigData() throws FileNotFoundException{
+        // try with resources ensures exception is handled and automatically close the
         Reader reader = new FileReader(fileName);
        try(BufferedReader bufferedReader = new BufferedReader(reader) // Bufferedreader to read a line and block of code
        ){
