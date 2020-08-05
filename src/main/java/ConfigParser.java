@@ -41,7 +41,7 @@ public class ConfigParser {
                }
                if (splitLineValue[0].contains("[")) {
                    startValue = splitLineValue[0].substring(1, splitLineValue[0].length() - 1) + ".";
-                   //startValue += ".";
+
                }
                if (splitLineValue[0].length() == 0) {
                    startValue = "";
