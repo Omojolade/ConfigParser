@@ -2,6 +2,12 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
+
+/**
+ * The appropriate config file is read and its value populated in a hashmap.
+ *
+ */
+
 public class ConfigParser {
     private String fileName ;
     private Map<String, String> mapStoredValue = new HashMap<>();
@@ -16,23 +22,21 @@ public class ConfigParser {
             e.getMessage();
         }
 
-
     }
     public String getFileName() {
         return fileName;
     }
 
-
+    // This methods read from the file
     public void readConfigData() throws FileNotFoundException{
         Reader reader = new FileReader(fileName);
-       try(BufferedReader bufferedReader = new BufferedReader(reader)
+       try(BufferedReader bufferedReader = new BufferedReader(reader) // Bufferedreader to read a line and block of code
        ){
            String line = bufferedReader.readLine();
 
            String startValue = "";
            while(line != null) {
-
-                //do something with line
+                // result obtained are stored in a map to get the key and value
                String[] splitLineValue = line.split("=");
                if (splitLineValue.length > 1) {
                    if (!mapStoredValue.containsKey(startValue + splitLineValue[0])) {
