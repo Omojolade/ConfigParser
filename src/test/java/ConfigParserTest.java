@@ -14,7 +14,7 @@ class ConfigParserTest {
                 ()->assertEquals("8080",mapStoredValue.get("application.port")),
                 ()->assertEquals("/api/v1",mapStoredValue.get("application.context-url")),
                 ()->assertEquals("127.0.0.1",mapStoredValue.get("host")),
-                ()->assertEquals("1q04_db",mapStoredValue.get("dbname")),
+                ()->assertEquals("sq04_db",mapStoredValue.get("dbname")),
                 ()->assertEquals("production",mapStoredValue.get("mode"))
         );
 

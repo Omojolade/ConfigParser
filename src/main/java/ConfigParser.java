@@ -4,7 +4,7 @@ import java.util.Map;
 
 
 /**
- * The appropriate config file is read and its value populated in a hashmap.
+ * The appropriate config file is read and its value is stored in a hashmap.
  *
  */
 
